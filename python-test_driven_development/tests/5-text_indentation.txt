@@ -1,0 +1,21 @@
+The ``5-text_indentation`` module
+====================================
+
+Using ``text_indentation``
+-----------------------------
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    >>> text_indentation("Hello world. How are you? Fine: thanks.")
+    Hello world.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Fine:
+    <BLANKLINE>
+    thanks.
+    <BLANKLINE>
+
+    >>> text_indentation(89)
+    Traceback (most recent call last):
+    TypeError: text must be a string
