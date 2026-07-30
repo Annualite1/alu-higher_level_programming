@@ -1,32 +1,17 @@
 # python-more_classes
 
-This project is part of the Higher Level Programming curriculum.
-It covers advanced Object-Oriented Programming concepts in Python 3, including:
+Project covering classes, properties, dunder methods, static/class methods,
+and pycodestyle compliance, using a `Rectangle` class built incrementally
+across tasks 0-9.
 
-- Object-Oriented Programming fundamentals
-- Public, protected, and private attributes
-- Properties and the Pythonic way to write getters/setters
-- The `__init__`, `__str__`, and `__repr__` special methods
-- Class attributes vs instance attributes
-- Class methods and static methods
-- Dynamically creating attributes on instances
-- How Python resolves attributes via `__dict__` and `getattr`
-
-## Files
-
-| File | Description |
-|------|-------------|
-| `0-rectangle.py` | Empty Rectangle class |
-| `1-rectangle.py` | Rectangle with private width/height and properties |
-| `2-rectangle.py` | Adds area() and perimeter() methods |
-| `3-rectangle.py` | Adds __str__ for string representation |
-| `4-rectangle.py` | Adds __repr__ for eval()-based recreation |
-| `5-rectangle.py` | Adds __del__ to detect instance deletion |
-| `6-rectangle.py` | Adds number_of_instances class attribute |
-| `7-rectangle.py` | Adds print_symbol class attribute |
-| `8-rectangle.py` | Adds bigger_or_equal static method |
-| `9-rectangle.py` | Adds square class method |
-
-## Author
-
-Guillaume (ALU Higher Level Programming Project)
+## Tasks
+0. Simple rectangle
+1. Real definition of a rectangle (width/height properties)
+2. Area and Perimeter
+3. String representation (`__str__`)
+4. Eval is magic (`__repr__`)
+5. Detect instance deletion (`__del__`)
+6. How many instances (`number_of_instances`)
+7. Change representation (`print_symbol`)
+8. Compare rectangles (`bigger_or_equal`)
+9. A square is a rectangle (`square` classmethod)

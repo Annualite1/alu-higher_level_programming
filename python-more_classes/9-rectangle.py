@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class."""
+"""Defines a rectangle class."""
 
 
 class Rectangle:
@@ -59,28 +59,28 @@ class Rectangle:
         """Return the printable representation of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-
-        rect = []
-        for i in range(self.__height):
-            rect.append(str(self.print_symbol) * self.__width)
-        return "\n".join(rect)
+        rows = [str(self.print_symbol) * self.__width
+                for _ in range(self.__height)]
+        return "\n".join(rows)
 
     def __repr__(self):
-        """Return a string representation of the Rectangle for eval()."""
+        """Return a string representation to recreate the Rectangle."""
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Print a message on instance deletion."""
+        """Print a message when the Rectangle is deleted."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Return the biggest rectangle based on the area.
+        """Return the bigger rectangle based on area.
 
         Args:
             rect_1 (Rectangle): The first rectangle to compare.
             rect_2 (Rectangle): The second rectangle to compare.
+        Returns:
+            rect_1 if area is >= to rect_2 area, else rect_2.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -96,5 +96,7 @@ class Rectangle:
 
         Args:
             size (int): The width and height of the new Rectangle.
+        Returns:
+            A new Rectangle instance.
         """
         return cls(size, size)
